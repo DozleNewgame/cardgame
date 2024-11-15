@@ -1,21 +1,9 @@
-// 背景画像の設定を反映
-if (backgroundImageUrl) {
-    document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
-}
-
-// カードを生成する関数
+// ゲームの設定を読み込んで、カードを生成する
 function createCards() {
     const gameBoard = document.getElementById("gameBoard");
-    gameBoard.innerHTML = ''; // ゲームボードをカラにする
+    gameBoard.innerHTML = ''; // ゲームボードを空にする
 
-    if (punishmentValues.length < cardCount) {
-        alert("罰ゲームの数がカード枚数より少ないです。罰ゲームを追加してください。");
-        return;
-    }
-
-    const selectedPunishments = punishmentValues.slice(0, cardCount);
-
-    selectedPunishments.forEach((item, index) => {
+    punishmentValues.forEach((item, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
@@ -28,24 +16,23 @@ function createCards() {
                 </div>
             </div>
         `;
-        card.addEventListener("click", () => flipCard(card, index)); // クリックしたらひっくり返る
+        card.addEventListener("click", () => flipCard(card, index)); // クリックイベントを追加
         gameBoard.appendChild(card);
     });
 }
 
-// カードを裏返す関数
+// カードをひっくり返す関数
 function flipCard(card, index) {
     if (!card.classList.contains("flip")) {
         card.classList.add("flip");
-
-        // カードの状態をFirebaseに書き込む
+        // カードの状態をFirebaseに保存
         database.ref('cards/' + index).set({
             flipped: true
         });
     }
 }
 
-// Firebaseからカードの状態をリアルタイムで取得
+// Firebaseからカードの状態を取得し、反映する
 database.ref('cards').on('value', (snapshot) => {
     const cardData = snapshot.val();
     if (cardData) {

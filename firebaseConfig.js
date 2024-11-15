@@ -1,14 +1,15 @@
-// Firebaseの設定情報をここに貼り付けてください
+// Firebaseの設定情報を貼り付けます
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyDFGw8AJ9_v_zk0p8iyxeep6rwQrMG2I",
+    authDomain: "dozlecard-28e2d.firebaseapp.com",
+    databaseURL: "https://dozlecard-28e2d-default-rtdb.firebaseio.com",
+    projectId: "dozlecard-28e2d",
+    storageBucket: "dozlecard-28e2d.appspot.com",
+    messagingSenderId: "767591771764",
+    appId: "1:767591771764:web:a4bb44566eabc34b06d021",
+    measurementId: "G-HY8R46SGFM"
 };
 
 // Firebaseの初期化
-const app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
