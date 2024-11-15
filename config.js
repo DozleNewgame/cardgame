@@ -7,7 +7,7 @@ const cardImageUrl = 'dozle_card.jpg'; // 表面に画像を入れたかった�
 // ゲームボードの設定
 const rows = 4; // カードを縦に3枚並べてあげるわ！
 const columns = 10; // 横にも3枚ね、文句ないでしょ？
-const cardCount = 50; // カードの枚数はこれで決まり！
+const cardCount = 40; // カードの枚数はこれで決まり！
 
 // それぞれのカードの裏に仕込む罰ゲームの内容
 const punishmentValues = [
