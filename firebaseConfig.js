@@ -11,5 +11,10 @@ const firebaseConfig = {
 };
 
 // Firebaseの初期化
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+if (typeof firebase !== 'undefined') {
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    console.log("Firebase initialized successfully");
+} else {
+    console.error("Firebase is not loaded");
+}
