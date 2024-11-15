@@ -1,4 +1,4 @@
-// Firebaseの設定情報を貼り付けます
+// Firebaseの設定情報
 const firebaseConfig = {
     apiKey: "AIzaSyDFGw8AJ9_v_zk0p8iyxeep6rwQrMG2I",
     authDomain: "dozlecard-28e2d.firebaseapp.com",
