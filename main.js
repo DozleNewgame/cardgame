@@ -20,9 +20,10 @@ function createCards() {
         card.classList.add("card");
         card.innerHTML = `
             <div class="card-inner">
-                <div class="card-front" style="${cardImageUrl ? `background-image: url('${cardImageUrl}')` : ''};">
-                    ?
-                </div>
+ <div class="card-front" style="${cardImageUrl ? `background-image: url('${cardImageUrl}')` : ''};">
+    ${cardImageUrl ? '' : '?'}
+</div>
+
                 <div class="card-back" style="background-color: ${item.backColor}; color: ${item.textColor}; font-size: ${item.fontSize};">
                     ${item.description}
                 </div>
