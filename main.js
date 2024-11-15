@@ -1,10 +1,22 @@
-// ゲームの設定を読み込んで、カードを生成する
+// 背景画像の設定を反映
+if (backgroundImageUrl) {
+    document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
+}
+
+// カードを生成する関数
 function createCards() {
     const gameBoard = document.getElementById("gameBoard");
-    gameBoard.innerHTML = ''; // ゲームボードを空にする
+    gameBoard.innerHTML = ''; // ゲームボードをカラにしてやるわよ！
 
-    punishmentValues.forEach((item, index) => {
-        const card = document.createElement("div");
+    if (punishmentValues.length < cardCount) {
+        alert("罰ゲームの数がカード枚数より少ないです。罰ゲームを追加してください。"); // 罰ゲームが足りないわよ！もっと追加しなさい！
+        return;
+    }
+
+    const selectedPunishments = punishmentValues.slice(0, cardCount); // 8枚分の罰ゲームだけ取り出してやるわ！
+
+    selectedPunishments.forEach((item, index) => {
+        const card = document.createElement("div"); // 新しいカードを作ってやったわよ
         card.classList.add("card");
         card.innerHTML = `
             <div class="card-inner">
@@ -16,33 +28,17 @@ function createCards() {
                 </div>
             </div>
         `;
-        card.addEventListener("click", () => flipCard(card, index)); // クリックイベントを追加
-        gameBoard.appendChild(card);
+        card.addEventListener("click", () => flipCard(card)); // クリックしたらひっくり返してやるわ！
+        gameBoard.appendChild(card); // ゲームボードにカードを追加してやるから感謝しなさいよね！
     });
 }
 
-// カードをひっくり返す関数
-function flipCard(card, index) {
+// カードを裏返す関数
+function flipCard(card) {
     if (!card.classList.contains("flip")) {
-        card.classList.add("flip");
-        // カードの状態をFirebaseに保存
-        database.ref('cards/' + index).set({
-            flipped: true
-        });
+        card.classList.add("flip"); // ほら、ひっくり返してやるわよ！
     }
 }
 
-// Firebaseからカードの状態を取得し、反映する
-database.ref('cards').on('value', (snapshot) => {
-    const cardData = snapshot.val();
-    if (cardData) {
-        Object.keys(cardData).forEach(index => {
-            if (cardData[index].flipped) {
-                document.querySelectorAll('.card')[index].classList.add('flip');
-            }
-        });
-    }
-});
-
-// 初期化処理
+// ゲームボードを初期化
 createCards();
