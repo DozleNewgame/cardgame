@@ -11,7 +11,7 @@ const cardCount = 8; // カードの枚数はこれで決まり！
 
 // それぞれのカードの裏に仕込む罰ゲームの内容
 const punishmentValues = [
-    { description: "大声で笑う", fontSize: "1.2em", backColor: "lightgray", textColor: "black" },
+    { description: "で笑う", fontSize: "1.2em", backColor: "lightgray", textColor: "black" },
     { description: "変顔をする", fontSize: "1.5em", backColor: "lightgray", textColor: "black" },
     { description: "逆立ちする", fontSize: "1.3em", backColor: "lightgray", textColor: "black" },
     { description: "驚くポーズ", fontSize: "1.4em", backColor: "lightgray", textColor: "black" },
