@@ -11,5 +11,5 @@ const firebaseConfig = {
 };
 
 // Firebaseの初期化
-const app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
