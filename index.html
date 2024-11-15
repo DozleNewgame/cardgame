@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flipping App</title>
+    <script type="module">
+        // Firebase SDKの読み込み
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getDatabase, ref, set, onValue, remove } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+
+        // Firebaseの設定
+        const firebaseConfig = {
+            apiKey: "AIzaSyALlQaOKzf5z-sraT7FD72_urw8zmUjVdU",
+            authDomain: "dozle-card.firebaseapp.com",
+            databaseURL: "https://dozle-card-default-rtdb.firebaseio.com",
+            projectId: "dozle-card",
+            storageBucket: "dozle-card.firebasestorage.app",
+            messagingSenderId: "845761932130",
+            appId: "1:845761932130:web:6f088cd3aaa8b164931a3b"
+        };
+
+        // Firebase初期化
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // カードをめくる関数
+        function flipCard(cardId) {
+            const cardElement = document.getElementById(cardId);
+            if (cardElement) {
+                cardElement.classList.toggle('flip');
+            }
+            set(ref(database, 'cards/' + cardId), { flipped: true });
+        }
+
+        // カードのリセット関数
+        function resetCards() {
+            remove(ref(database, 'cards')).then(() => {
+                console.log("All cards reset.");
+                const allCards = document.querySelectorAll('.card');
+                allCards.forEach(card => {
+                    card.classList.remove('flip');
+                });
+            }).catch((error) => {
+                console.error("Error resetting cards: ", error);
+            });
+        }
+
+        // グローバルスコープに公開
+        window.flipCard = flipCard;
+        window.resetCards = resetCards;
+
+        // カードの状態をリアルタイムで監視
+        onValue(ref(database, 'cards'), (snapshot) => {
+            const cards = snapshot.val();
+            const allCards = document.querySelectorAll('.card');
+            allCards.forEach(card => {
+                const cardInner = card.querySelector('.card-inner');
+                const cardContent = JSON.parse(card.dataset.content); // 裏側の内容取得
+                if (cards && cards[card.id] && cards[card.id].flipped) {
+                    card.classList.add('flip');
+                    cardInner.querySelector('.card-back').innerHTML = `<div class="card-text" style="color: ${cardContent.textColor}; font-size: ${cardContent.fontSize}; background-color: ${cardContent.color};">${cardContent.text}</div>`;
+                } else {
+                    card.classList.remove('flip');
+                    cardInner.querySelector('.card-front').style.backgroundImage = `url('${card.dataset.image}')`;
+                }
+            });
+        });
+
+        // JSONファイルを読み込み、カードを生成する関数
+        async function loadCardContents() {
+            try {
+                const response = await fetch('cardContents.json'); // JSONファイルを読み込む
+                const cardContents = await response.json();
+                generateCards(50, 5, 'dozle_card.jpg', cardContents);
+            } catch (error) {
+                console.error('Error loading card contents:', error);
+            }
+        }
+
+        // カードを動的に生成する関数
+        function generateCards(totalCards, rows, imageUrl, cardContents) {
+            const container = document.getElementById('cards-container');
+            container.innerHTML = ''; // 既存のカードをクリア
+            const cols = Math.ceil(totalCards / rows); // 列数を計算
+
+            let cardNumber = 1;
+            for (let i = 0; i < rows; i++) {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'card-row';
+                for (let j = 0; j < cols && cardNumber <= totalCards; j++) {
+                    const card = document.createElement('div');
+                    card.id = `card${cardNumber}`;
+                    card.className = 'card';
+                    card.dataset.image = imageUrl; // 表側の画像URLを設定
+                    card.dataset.content = JSON.stringify(cardContents[cardNumber - 1]); // 裏側の内容を設定
+
+                    const cardInner = document.createElement('div');
+                    cardInner.className = 'card-inner';
+
+                    const cardFront = document.createElement('div');
+                    cardFront.className = 'card-front';
+
+                    const cardBack = document.createElement('div');
+                    cardBack.className = 'card-back';
+
+                    cardInner.appendChild(cardFront);
+                    cardInner.appendChild(cardBack);
+                    card.appendChild(cardInner);
+                    card.onclick = () => flipCard(card.id);
+                    rowDiv.appendChild(card);
+                    cardNumber++;
+                }
+                // 行に不足しているカードを空白で埋める
+                while (rowDiv.children.length < cols) {
+                    const emptyCard = document.createElement('div');
+                    emptyCard.className = 'card empty-card'; // 空のカードスタイル
+                    rowDiv.appendChild(emptyCard);
+                }
+                container.appendChild(rowDiv);
+            }
+        }
+
+        // ページ読み込み時にカードを生成
+        window.onload = () => {
+            loadCardContents();
+        };
+    </script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #2e8b57; /* 単色の背景色を指定 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* 縦の余白 */
+            width: 100%;
+        }
+        .card-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* 横の余白 */
+        }
+        .card {
+            width: 100px; /* 固定幅 */
+            height: 150px; /* 固定高さ */
+            perspective: 1000px; /* 3D効果を追加 */
+        }
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s; /* アニメーション追加 */
+            cursor: pointer;
+        }
+        .card.flip .card-inner {
+            transform: rotateY(180deg); /* カードがひっくり返るアニメーション */
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px; /* 角丸を追加 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px; /* パディングを調整 */
+        }
+        .card-front {
+            background-color: black;
+            background-size: cover;
+            color: white;
+            font-size: 1.5em;
+        }
+        .card-back {
+            background-color: lightgray;
+            color: black;
+            transform: rotateY(180deg); /* 裏面はひっくり返って表示 */
+        }
+        .empty-card {
+            background-color: transparent; /* 空のカードは透明 */
+            pointer-events: none; /* クリックできないように */
+        }
+        .card-text {
+            padding: 5px;
+            word-wrap: break-word;
+            text-align: center;
+            font-weight: bold; /* 太字 */
+            font-family: 'Arial', sans-serif; /* フォントを指定 */
+        }
+        .reset-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cards-container" class="cards-container"></div>
+    <button class="reset-button" onclick="resetCards()">Reset Cards</button>
+</body>
+</html>
