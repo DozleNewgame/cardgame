@@ -1,6 +1,6 @@
 [
     {
-        "text": "ああああ<br>ああ",
+        "text": "ああい<br>ああ",
         "color": "#c80000",
         "fontSize": "16px",
         "textColor": "white"
@@ -39,7 +39,7 @@
         "text": "全員1試合\\nお嬢様になって応援",
         "color": "white",
         "fontSize": "16px",
-        "textColor": "white"
+        "textColor": "#000000"
     },
     {
         "text": "一発ギャグをやる",
