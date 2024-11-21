@@ -1,128 +1,260 @@
 [
     {
-        "text": "びりびりペン",
+        "text": "ぼんじゅうる<br>が考えた<br>一発ギャグ<br>をやる",
         "color": "#54c3f1",
-        "fontSize": "16px",
+        "fontSize": "12px",
         "textColor": "white"
     },
     {
-        "text": "全員1試合<br>こどもになって応援",
+        "text": "1試合<br>お嬢様に<br>なって応援",
+        "color": "#c80000",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "罰ゲーム<br>回避",
         "color": "white",
-        "fontSize": "14px",
-        "textColor": "black"
-    },
-    {
-        "text": "ぼんさんをほめちぎるポスト",
-        "color": "#fcc700",
-        "fontSize": "14px",
-        "textColor": "black"
-    },
-    {
-        "text": "1試合テンションＭＡＸ",
-        "color": "#fcc700",
         "fontSize": "16px",
         "textColor": "black"
     },
     {
-        "text": "ぼんさんをほめちぎるポスト",
-        "color": "#54c3f1",
-        "fontSize": "14px",
-        "textColor": "white"
-    },
-    {
-        "text": "スト６の絵をかいてポスト",
+        "text": "1試合<br>感謝の<br>正拳突き",
         "color": "#eb6d9a",
         "fontSize": "16px",
         "textColor": "white"
     },
     {
-        "text": "罰ゲーム回避",
-        "color": "white",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "全員1試合<br>ぼんじゅうるになりきる",
+        "text": "全員1試合<br>お嬢様に<br>なって応援",
         "color": "white",
         "fontSize": "14px",
         "textColor": "black"
     },
     {
-        "text": "一発ギャグをやる",
+        "text": "1試合<br>お嬢様に<br>なって応援",
+        "color": "#54c3f1",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "びりびり<br>ペン",
         "color": "#fcc700",
         "fontSize": "16px",
         "textColor": "black"
     },
     {
-        "text": "ぼんさんをほめちぎるポスト",
-        "color": "#c80000",
+        "text": "全員1試合<br>こどもに<br>なって応援",
+        "color": "white",
         "fontSize": "14px",
-        "textColor": "white"
+        "textColor": "black"
     },
     {
-        "text": "1試合感謝の正拳突き",
-        "color": "#54c3f1",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "びりびりペン",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合テンションＭＡＸ",
+        "text": "1試合<br>犯罪者<br>ボイス",
         "color": "#eb6d9a",
         "fontSize": "16px",
         "textColor": "white"
     },
     {
-        "text": "一発ギャグをやる",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "腕立て20回",
+        "text": "一発<br>ギャグを<br>やる",
         "color": "#fcc700",
         "fontSize": "16px",
         "textColor": "black"
     },
     {
-        "text": "1試合お嬢様になって応援",
-        "color": "#fcc700",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "1試合犯罪者ボイス",
+        "text": "1試合<br>テンション<br>ＭＡＸ",
         "color": "#eb6d9a",
         "fontSize": "14px",
         "textColor": "white"
     },
     {
-        "text": "腕立て20回",
-        "color": "#54c3f1",
+        "text": "1試合<br>テンション<br>ＭＡＸ",
+        "color": "#c80000",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "腕立て<br>20回",
+        "color": "#eb6d9a",
         "fontSize": "16px",
         "textColor": "white"
     },
     {
-        "text": "1試合テンションＭＡＸ",
-        "color": "#54c3f1",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合感謝の正拳突き",
+        "text": "びりびり<br>ペン",
         "color": "#c80000",
         "fontSize": "16px",
         "textColor": "white"
     },
     {
-        "text": "全員1試合<br>お嬢様になって応援",
+        "text": "1試合<br>感謝の<br>正拳突き",
+        "color": "#fcc700",
+        "fontSize": "16px",
+        "textColor": "black"
+    },
+    {
+        "text": "全員1試合<br>原始人ドズル<br>になって応援",
+        "color": "white",
+        "fontSize": "12px",
+        "textColor": "black"
+    },
+    {
+        "text": "スト６の<br>絵を描いて<br>ポスト",
+        "color": "#fcc700",
+        "fontSize": "14px",
+        "textColor": "black"
+    },
+    {
+        "text": "1試合<br>お嬢様に<br>なって応援",
+        "color": "#eb6d9a",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>犯罪者<br>ボイス",
+        "color": "#54c3f1",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>お嬢様に<br>なって応援",
+        "color": "#fcc700",
+        "fontSize": "14px",
+        "textColor": "black"
+    },
+    {
+        "text": "全員1試合<br>ゴリラに<br>なって応援",
         "color": "white",
         "fontSize": "14px",
+        "textColor": "black"
+    },
+    {
+        "text": "ぼんじゅうる<br>が考えた<br>一発ギャグ<br>をやる",
+        "color": "#fcc700",
+        "fontSize": "12px",
+        "textColor": "black"
+    },
+    {
+        "text": "腕立て<br>20回",
+        "color": "#c80000",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "罰ゲーム<br>回避",
+        "color": "white",
+        "fontSize": "16px",
+        "textColor": "black"
+    },
+    {
+        "text": "一発<br>ギャグを<br>やる",
+        "color": "#eb6d9a",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "全員1試合<br>ぼんじゅうる<br>になりきる",
+        "color": "white",
+        "fontSize": "12px",
+        "textColor": "black"
+    },
+    {
+        "text": "ぼんじゅうる<br>が考えた<br>一発ギャグ<br>をやる",
+        "color": "#eb6d9a",
+        "fontSize": "12px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>感謝の<br>正拳突き",
+        "color": "#54c3f1",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "スト６の<br>絵を描いて<br>ポスト",
+        "color": "#c80000",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "腕立て<br>20回",
+        "color": "#54c3f1",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "ぼんじゅうる<br>をほめちぎる<br>ポスト",
+        "color": "#54c3f1",
+        "fontSize": "12px",
+        "textColor": "white"
+    },
+    {
+        "text": "ぼんじゅうる<br>が考えた<br>一発ギャグ<br>をやる",
+        "color": "#c80000",
+        "fontSize": "12px",
+        "textColor": "white"
+    },
+    {
+        "text": "スト６の<br>絵を描いて<br>ポスト",
+        "color": "#54c3f1",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "一発<br>ギャグを<br>やる",
+        "color": "#c80000",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "一発<br>ギャグを<br>やる",
+        "color": "#54c3f1",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "ぼんじゅうる<br>をほめちぎる<br>ポスト",
+        "color": "#c80000",
+        "fontSize": "12px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>犯罪者<br>ボイス",
+        "color": "#c80000",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "全員1試合<br>ボディビルの<br>掛け声風応援",
+        "color": "white",
+        "fontSize": "12px",
+        "textColor": "black"
+    },
+    {
+        "text": "1試合<br>犯罪者<br>ボイス",
+        "color": "#fcc700",
+        "fontSize": "16px",
+        "textColor": "black"
+    },
+    {
+        "text": "びりびり<br>ペン",
+        "color": "#54c3f1",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>感謝の<br>正拳突き",
+        "color": "#c80000",
+        "fontSize": "16px",
+        "textColor": "white"
+    },
+    {
+        "text": "1試合<br>テンション<br>ＭＡＸ",
+        "color": "#54c3f1",
+        "fontSize": "14px",
+        "textColor": "white"
+    },
+    {
+        "text": "ぼんじゅうる<br>をほめちぎる<br>ポスト",
+        "color": "#fcc700",
+        "fontSize": "12px",
         "textColor": "black"
     },
     {
@@ -132,170 +264,38 @@
         "textColor": "black"
     },
     {
-        "text": "1試合犯罪者ボイス",
-        "color": "#c80000",
-        "fontSize": "14px",
-        "textColor": "white"
-    },
-    {
-        "text": "ぼんさんをほめちぎるポスト",
+        "text": "びりびり<br>ペン",
         "color": "#eb6d9a",
-        "fontSize": "14px",
-        "textColor": "white"
-    },
-    {
-        "text": "ぼんさんが考えた一発ギャグをやる",
-        "color": "#54c3f1",
         "fontSize": "16px",
         "textColor": "white"
     },
     {
-        "text": "全員1試合<br>ボディビルの掛け声風応援",
-        "color": "white",
-        "fontSize": "14px",
-        "textColor": "black"
-    },
-    {
-        "text": "1試合お嬢様になって応援",
-        "color": "#c80000",
-        "fontSize": "16px",
+        "text": "ぼんじゅうる<br>をほめちぎる<br>ポスト",
+        "color": "#eb6d9a",
+        "fontSize": "12px",
         "textColor": "white"
     },
     {
-        "text": "びりびりペン",
+        "text": "腕立て<br>20回",
         "color": "#fcc700",
         "fontSize": "16px",
         "textColor": "black"
     },
     {
-        "text": "1試合お嬢様になって応援",
+        "text": "スト６の<br>絵を描いて<br>ポスト",
         "color": "#eb6d9a",
-        "fontSize": "16px",
+        "fontSize": "14px",
         "textColor": "white"
     },
     {
-        "text": "罰ゲーム回避",
-        "color": "white",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "びりびりペン",
-        "color": "#eb6d9a",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "スト６の絵をかいてポスト",
-        "color": "#54c3f1",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合犯罪者ボイス",
+        "text": "1試合<br>テンション<br>ＭＡＸ",
         "color": "#fcc700",
         "fontSize": "14px",
         "textColor": "black"
     },
     {
-        "text": "1試合犯罪者ボイス",
-        "color": "#54c3f1",
-        "fontSize": "14px",
-        "textColor": "white"
-    },
-    {
-        "text": "ぼんさんが考えた一発ギャグをやる",
-        "color": "#eb6d9a",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合感謝の正拳突き",
-        "color": "#eb6d9a",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "ぼんさんが考えた一発ギャグをやる",
-        "color": "#fcc700",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "腕立て20回",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "一発ギャグをやる",
-        "color": "#eb6d9a",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合感謝の正拳突き",
-        "color": "#fcc700",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "腕立て20回",
-        "color": "#eb6d9a",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "全員1試合<br>ゴリラになって応援",
+        "text": "罰ゲーム<br>回避",
         "color": "white",
-        "fontSize": "14px",
-        "textColor": "black"
-    },
-    {
-        "text": "全員1試合<br>原始人ドズルになって応援",
-        "color": "white",
-        "fontSize": "14px",
-        "textColor": "black"
-    },
-    {
-        "text": "一発ギャグをやる",
-        "color": "#54c3f1",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "ぼんさんが考えた一発ギャグをやる",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "罰ゲーム回避",
-        "color": "white",
-        "fontSize": "16px",
-        "textColor": "black"
-    },
-    {
-        "text": "1試合お嬢様になって応援",
-        "color": "#54c3f1",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "1試合テンションＭＡＸ",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "スト６の絵をかいてポスト",
-        "color": "#c80000",
-        "fontSize": "16px",
-        "textColor": "white"
-    },
-    {
-        "text": "スト６の絵をかいてポスト",
-        "color": "#fcc700",
         "fontSize": "16px",
         "textColor": "black"
     }
