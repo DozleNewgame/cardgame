@@ -1,14 +1,14 @@
 [
     {
-        "text": "後<br>行",
-        "color": "red",
-        "fontSize": "30px",
-        "textColor": "white"
+        "text": "後<br>攻",
+        "color": "#00d49d",
+        "fontSize": "40px",
+        "textColor": "#fedf03"
     },
     {
-        "text": "先<br>行",
-        "color": "lightblue",
-        "fontSize": "30px",
-        "textColor": "black"
+        "text": "先<br>攻",
+        "color": "#fedf03",
+        "fontSize": "40px",
+        "textColor": "#00d49d"
     }
 ]
