@@ -2,13 +2,13 @@
     {
         "text": "後<br>行",
         "color": "red",
-        "fontSize": "14px",
-        "textColor": "black"
+        "fontSize": "30px",
+        "textColor": "white"
     },
     {
         "text": "先<br>行",
         "color": "lightblue",
-        "fontSize": "16px",
+        "fontSize": "30px",
         "textColor": "black"
     }
 ]
