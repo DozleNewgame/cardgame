@@ -1,14 +1,32 @@
 [
     {
-        "text": "後<br>攻",
-        "color": "#00d49d",
-        "fontSize": "40px",
-        "textColor": "#fedf03"
+        "text": "5",
+        "color": "white",
+        "fontSize": "100px",
+        "textColor": "red"
     },
     {
-        "text": "先<br>攻",
-        "color": "#fedf03",
-        "fontSize": "40px",
-        "textColor": "#00d49d"
+        "text": "3",
+        "color": "white",
+        "fontSize": "100px",
+        "textColor": "red"
+    },
+        {
+        "text": "1",
+        "color": "white",
+        "fontSize": "100px",
+        "textColor": "red"
+    },
+        {
+        "text": "4",
+        "color": "white",
+        "fontSize": "100px",
+        "textColor": "red"
+    },
+        {
+        "text": "2",
+        "color": "white",
+        "fontSize": "100px",
+        "textColor": "red"
     }
 ]
