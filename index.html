@@ -75,7 +75,7 @@
             try {
                 const response = await fetch('cardContents.json'); // JSONファイルを読み込む
                 const cardContents = await response.json();
-                generateCards(2, 1, 'dozle_card.jpg', cardContents);
+                generateCards(5, 1, 'dozle_card.jpg', cardContents);
             } catch (error) {
                 console.error('Error loading card contents:', error);
             }
@@ -157,7 +157,7 @@
         .card-row {
             display: flex;
             justify-content: center;
-            gap: 10px; /* 横の余白 */
+            gap: 30px; /* 横の余白 */
         }
         .card {
             width: 200px; /* 固定幅 */
